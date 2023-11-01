@@ -33,7 +33,7 @@ public class RestaVisual extends javax.swing.JFrame {
         lblEtiquetaSegundoNumero = new javax.swing.JLabel();
         txtPrimerNumero = new javax.swing.JTextField();
         txtSegundoNumero = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnRestar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,10 +44,10 @@ public class RestaVisual extends javax.swing.JFrame {
 
         lblEtiquetaSegundoNumero.setText("Ingrese el segundo número:");
 
-        jButton1.setText("Restar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnRestar.setText("Restar");
+        btnRestar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnRestarActionPerformed(evt);
             }
         });
 
@@ -71,7 +71,7 @@ public class RestaVisual extends javax.swing.JFrame {
                 .addGap(48, 48, 48))
             .addGroup(layout.createSequentialGroup()
                 .addGap(158, 158, 158)
-                .addComponent(jButton1)
+                .addComponent(btnRestar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -88,14 +88,14 @@ public class RestaVisual extends javax.swing.JFrame {
                     .addComponent(lblEtiquetaSegundoNumero)
                     .addComponent(txtSegundoNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51)
-                .addComponent(jButton1)
+                .addComponent(btnRestar)
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
         double n1=Double.parseDouble(txtPrimerNumero.getText());
         double n2=Double.parseDouble(txtSegundoNumero.getText());
         double respuesta;
@@ -107,7 +107,7 @@ public class RestaVisual extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(rootPane, "La respuesta es: "+ respuesta);
         txtPrimerNumero.setText("");
         txtSegundoNumero.setText("");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnRestarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,7 +145,7 @@ public class RestaVisual extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnRestar;
     private javax.swing.JLabel lblEtiquetaPrimerNumero;
     private javax.swing.JLabel lblEtiquetaSegundoNumero;
     private javax.swing.JLabel lblTítuloResta;
