@@ -4,7 +4,9 @@
  */
 package Suma;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
@@ -40,12 +42,13 @@ public class Division extends javax.swing.JFrame {
         txtNumero2 = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         btnDivision = new javax.swing.JButton();
+        txtRespuesta = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(0, 51, 51));
 
         lblTitulo.setFont(new java.awt.Font("Leelawadee UI", 0, 24)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(0, 153, 153));
+        lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
         lblTitulo.setText("Division");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -65,7 +68,7 @@ public class Division extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lblNumero1.setForeground(new java.awt.Color(255, 255, 255));
+        lblNumero1.setForeground(new java.awt.Color(0, 0, 0));
         lblNumero1.setText("Ingrese Un Numero:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -85,6 +88,12 @@ public class Division extends javax.swing.JFrame {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
+        txtNumero1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumero1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -100,7 +109,7 @@ public class Division extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        lblNumero2.setForeground(new java.awt.Color(255, 255, 255));
+        lblNumero2.setForeground(new java.awt.Color(0, 0, 0));
         lblNumero2.setText("Ingrese Otro Numero:");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -118,6 +127,12 @@ public class Division extends javax.swing.JFrame {
                 .addComponent(lblNumero2)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        txtNumero2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumero2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -152,6 +167,12 @@ public class Division extends javax.swing.JFrame {
             }
         });
 
+        txtRespuesta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRespuestaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -166,11 +187,16 @@ public class Division extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addGroup(layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(btnDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(btnDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(txtRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,18 +214,53 @@ public class Division extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDivision))
-                .addGap(0, 37, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(txtRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 14, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
-        double num1 = Integer.parseInt(txtNumero1.getText());
-        double num2 = Integer.parseInt(txtNumero2.getText());
-        double respuesta = (num1 / num2);
-        JOptionPane.showMessageDialog(rootPane, "La respuesta de su Division es: " + respuesta);
+
+        Double num1 = Double.parseDouble(txtNumero1.getText());
+        Double num2 = Double.parseDouble(txtNumero2.getText());
+        Double respuesta = 0.00;
+        txtRespuesta.setEditable(false);
+        if (num2 == 0) {
+            txtNumero2.setBackground(Color.red);
+            txtRespuesta.setText("ERROR, ∞");
+            JOptionPane.showMessageDialog(rootPane, "ERROR, No existe la division entre 0");
+
+        } else if (num2 > num1) {
+            txtNumero2.setBackground(Color.red);
+            respuesta = num1 / num2;
+            txtRespuesta.setText("Respuesta: " + respuesta);
+            JOptionPane.showMessageDialog(rootPane, "El Divisor es menor que el Dividendo " + "La respuesta de su Division es: " + respuesta);
+
+        } else {
+            txtNumero2.setBackground(UIManager.getColor("TextField.background"));
+            respuesta = num1 / num2;
+            txtRespuesta.setText("Respuesta: " + respuesta);
+
+        }
+        txtNumero1.setText("");
+        txtNumero2.setText("");
+
     }//GEN-LAST:event_btnDivisionActionPerformed
+
+    private void txtRespuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRespuestaActionPerformed
+
+    }//GEN-LAST:event_txtRespuestaActionPerformed
+
+    private void txtNumero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumero1ActionPerformed
+        txtNumero1.transferFocus();
+    }//GEN-LAST:event_txtNumero1ActionPerformed
+
+    private void txtNumero2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumero2ActionPerformed
+        txtNumero1.transferFocus();
+    }//GEN-LAST:event_txtNumero2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,5 +310,6 @@ public class Division extends javax.swing.JFrame {
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JTextField txtNumero1;
     private javax.swing.JTextField txtNumero2;
+    private javax.swing.JTextField txtRespuesta;
     // End of variables declaration//GEN-END:variables
 }
