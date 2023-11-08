@@ -144,7 +144,26 @@ public class IngresoCadenas extends javax.swing.JFrame {
 
     private void txtPalabraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPalabraKeyTyped
         // TODO add your handling code here:
-        
+        String palabra = txtPalabra.getText();
+        char[] caracter = palabra.toCharArray();
+        if (caracter[0] == 'a' || caracter[0] == 'A') {
+
+            txtPalabra.setForeground(Color.GREEN);
+        } else if (caracter[0] == 'e' || caracter[0] == 'E') {
+
+            txtPalabra.setForeground(Color.orange);
+        } else if (caracter[0] == 'i' || caracter[0] == 'I') {
+
+            txtPalabra.setForeground(Color.BLUE);
+        } else if (caracter[0] == 'o' || caracter[0] == 'O') {
+
+            txtPalabra.setForeground(Color.MAGENTA);
+        } else if (caracter[0] == 'u' || caracter[0] == 'U') {
+
+            txtPalabra.setForeground(Color.yellow);
+        } else {
+            txtPalabra.setForeground(Color.WHITE);
+        }
         
     }//GEN-LAST:event_txtPalabraKeyTyped
 

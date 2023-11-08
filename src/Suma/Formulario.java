@@ -34,8 +34,6 @@ public class Formulario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtNumero1 = new javax.swing.JTextPane();
         lblEcuador = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        lblArgentina = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,10 +53,6 @@ public class Formulario extends javax.swing.JFrame {
 
         lblEcuador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/descargar.jpg"))); // NOI18N
 
-        jButton1.setText("VALIDAR");
-
-        lblArgentina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/maxresdefault (1).jpg"))); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -66,43 +60,37 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(330, 330, 330)
                 .addComponent(lblBandera)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblNumero1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(262, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(lblArgentina, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(lblEcuador)
-                .addGap(47, 47, 47))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblEcuador)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblNumero1)
+                                .addGap(29, 29, 29)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(27, 27, 27)))
+                        .addGap(195, 195, 195))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(284, 284, 284))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblBandera)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNumero1))
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(btnNumero))
-                .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblArgentina)
-                    .addComponent(lblEcuador))
-                .addGap(153, 153, 153))
+                .addGap(33, 33, 33)
+                .addComponent(btnNumero)
+                .addGap(52, 52, 52)
+                .addComponent(lblEcuador)
+                .addGap(63, 63, 63))
         );
 
         pack();
@@ -115,11 +103,11 @@ public class Formulario extends javax.swing.JFrame {
         txtNumero1.setText(numeroRandom + "");
         if ((numeroRandom % 2) == 0) {
 
-            ImageIcon a = new ImageIcon("/C:\\Users\\User\\OneDrive\\Documentos\\NetBeansProjects\\Jframe\\src\\resourse");
+            ImageIcon a = new ImageIcon("C:\\Users\\User\\OneDrive\\Documentos\\NetBeansProjects\\Jframe\\src\\resourse\\descargar.jpg");
             lblEcuador.setIcon(a);
         } else {
-            ImageIcon a = new ImageIcon("C:\\Users\\User\\OneDrive\\Documentos\\NetBeansProjects\\Jframe\\src\\resourse");
-            lblArgentina.setIcon(a);
+            ImageIcon a = new ImageIcon("C:\\Users\\User\\OneDrive\\Documentos\\NetBeansProjects\\Jframe\\src\\resourse\\maxresdefault (1).jpg");
+            lblEcuador.setIcon(a);
         }
     }//GEN-LAST:event_btnNumeroActionPerformed
 
@@ -160,9 +148,7 @@ public class Formulario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNumero;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblArgentina;
     private javax.swing.JLabel lblBandera;
     private javax.swing.JLabel lblEcuador;
     private javax.swing.JLabel lblNumero1;
