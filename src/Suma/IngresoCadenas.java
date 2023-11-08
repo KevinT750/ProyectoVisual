@@ -146,23 +146,22 @@ public class IngresoCadenas extends javax.swing.JFrame {
         // TODO add your handling code here:
         String palabra = txtPalabra.getText();
         char[] caracter = palabra.toCharArray();
-        if (caracter[0] == 'a' || caracter[0] == 'A') {
-
-            txtPalabra.setForeground(Color.GREEN);
-        } else if (caracter[0] == 'e' || caracter[0] == 'E') {
-
-            txtPalabra.setForeground(Color.orange);
-        } else if (caracter[0] == 'i' || caracter[0] == 'I') {
-
-            txtPalabra.setForeground(Color.BLUE);
-        } else if (caracter[0] == 'o' || caracter[0] == 'O') {
-
-            txtPalabra.setForeground(Color.MAGENTA);
-        } else if (caracter[0] == 'u' || caracter[0] == 'U') {
-
-            txtPalabra.setForeground(Color.yellow);
+        if (caracter.length > 0) {
+            char primeraLetra = caracter[0];
+            if (primeraLetra == 'a' || primeraLetra == 'A') {
+                txtPalabra.setForeground(Color.GREEN);
+            } else if (primeraLetra == 'e' || primeraLetra == 'E') {
+                txtPalabra.setForeground(Color.ORANGE);
+            } else if (primeraLetra == 'i' || primeraLetra == 'I') {
+                txtPalabra.setForeground(Color.BLUE);
+            } else if (primeraLetra == 'o' || primeraLetra == 'O') {
+                txtPalabra.setForeground(Color.MAGENTA);
+            } else if (primeraLetra == 'u' || primeraLetra == 'U') {
+                txtPalabra.setForeground(Color.YELLOW);
+            
+            }
         } else {
-            txtPalabra.setForeground(Color.WHITE);
+            txtPalabra.setForeground(Color.BLACK);
         }
         
     }//GEN-LAST:event_txtPalabraKeyTyped
